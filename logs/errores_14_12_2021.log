@@ -1,0 +1,77 @@
+[2021-12-14T16:06:59.189] [ERROR] default - TypeError: Mysql.conectarDB is not a function
+    at iniciarServicio (C:\Proyectos\scaffold_servidor_node\bin\www.js:10:17)
+    at Object.<anonymous> (C:\Proyectos\scaffold_servidor_node\bin\www.js:27:3)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+[2021-12-14T17:41:38.628] [ERROR] default - Error: Table 'circars11.usuariosss' doesn't exist
+    at PromisePool.query (c:\Proyectos\scaffold_servidor_node\node_modules\mysql2\promise.js:341:22)
+    at Object.getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.model.js:7:50)
+    at getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.controller.js:11:35)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:281:22
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:354:14)
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:365:14) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from usuariosss',
+  sqlState: '42S02',
+  sqlMessage: "Table 'circars11.usuariosss' doesn't exist"
+}
+[2021-12-14T17:42:03.176] [ERROR] default - Error: Table 'circars11.usuariosss' doesn't exist
+    at PromisePool.query (c:\Proyectos\scaffold_servidor_node\node_modules\mysql2\promise.js:341:22)
+    at Object.getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.model.js:7:50)
+    at getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.controller.js:11:35)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:281:22
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:354:14)
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:365:14) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from usuariosss',
+  sqlState: '42S02',
+  sqlMessage: "Table 'circars11.usuariosss' doesn't exist"
+}
+[2021-12-14T17:42:35.840] [ERROR] default - Error: Table 'circars11.usuariosss' doesn't exist
+    at PromisePool.query (c:\Proyectos\scaffold_servidor_node\node_modules\mysql2\promise.js:341:22)
+    at Object.getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.model.js:7:50)
+    at getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.controller.js:11:35)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:281:22
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:354:14)
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:365:14) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from usuariosss',
+  sqlState: '42S02',
+  sqlMessage: "Table 'circars11.usuariosss' doesn't exist"
+}
+[2021-12-14T17:50:50.634] [ERROR] default - Error: Table 'circars11.usuariosss' doesn't exist
+    at PromisePool.query (c:\Proyectos\scaffold_servidor_node\node_modules\mysql2\promise.js:341:22)
+    at Object.getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.dao.js:8:42)
+    at Object.getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.model.js:6:20)
+    at getUsers (c:\Proyectos\scaffold_servidor_node\components\users\users.controller.js:11:35)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at next (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\layer.js:95:5)
+    at c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:281:22
+    at param (c:\Proyectos\scaffold_servidor_node\node_modules\express\lib\router\index.js:354:14) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from usuariosss',
+  sqlState: '42S02',
+  sqlMessage: "Table 'circars11.usuariosss' doesn't exist"
+}

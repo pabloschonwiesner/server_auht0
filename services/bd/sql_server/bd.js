@@ -1,6 +1,6 @@
 const sql = require('mssql');
 const { db } = require('./config');
-const { logger, loggerCO } = require('./../servicios/logger.servicio')
+const { logger, loggerCO } = require('../../../services/logging/logger')
 
 const poolPromise = new sql.ConnectionPool(db)
   .connect()

@@ -1,9 +1,5 @@
-const dotenv = require('dotenv');
-dotenv.config();
 
 const config = {
-  PORT: process.env.WEB_PORT,
-  SECRET: process.env.SECRET,
   db: {
     user: process.env.SQL_USER,
     password: process.env.SQL_PASSWORD,

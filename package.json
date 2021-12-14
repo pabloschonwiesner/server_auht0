@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon www.js"
   },
   "author": "Pablo Schonwiesner | Up Software",
   "license": "ISC",
@@ -15,7 +15,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "log4js": "^6.3.0",
-    "mssql": "^7.2.1"
+    "mssql": "^7.2.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

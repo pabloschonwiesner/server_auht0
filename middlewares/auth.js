@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { SECRET } = require('./../bd/config');
+const { SECRET } = require('../config/config');
 
 const verificaToken = (req, res, next) => {
   let token = req.headers['token']
