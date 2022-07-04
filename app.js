@@ -3,19 +3,24 @@ const path = require('path')
 const cors = require('cors')
 require('./services/utils/env')
 const { error404, generalErrorHandler } = require('./middlewares/errors')
+let history = require('connect-history-api-fallback');
 const indexRoutes = require('./routes')
 
 const app = express()
 
+app.use(history({
+  index: '/'
+}))
+
 app.use(cors())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-app.use('/public', express.static(path.join(__dirname,"/public/"))); 
+app.use('/public', express.static(path.join(__dirname, "/public/")));
 
 
-app.get('/', function(req,res) {
-  res.sendFile('index.html', { root: path.join(__dirname, '/public/') });   
+app.get('/', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '/public/') });
 });
 app.use('/', indexRoutes)
 
