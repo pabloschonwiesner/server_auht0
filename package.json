@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha  ./components/**/*.test.js --exit",
-    "dev": "nodemon www.js"
+    "dev": "nodemon www.js",
+    "start": "node www.js"
   },
   "author": "Pablo Schonwiesner | PuntoSchon",
   "license": "ISC",
