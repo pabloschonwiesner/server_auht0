@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha  ./components/**/*.test.js --exit",
     "dev": "nodemon www.js",
-    "start": "node www.js"
+    "start": "node www.js -p $PORT"
   },
   "author": "Pablo Schonwiesner | PuntoSchon",
   "license": "ISC",
