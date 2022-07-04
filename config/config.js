@@ -1,6 +1,6 @@
 
 const config = {
-  PORT: process.env.WEB_PORT,
+  PORT: process.env.PORT,
   SECRET: process.env.SECRET
 }
 
