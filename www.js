@@ -3,7 +3,7 @@
   const cluster = require('cluster')
   const numCPUs = require('os').cpus().length
   const { logger, loggerCO } = require('./services/logging/logger')
-  const { PORT } = require('./config/config')
+  const PORT = 3000
 
   try {
     if (cluster.isMaster) {
