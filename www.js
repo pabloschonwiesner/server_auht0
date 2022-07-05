@@ -11,7 +11,6 @@
         cluster.fork()
       }
     } else {
-      console.log('PORT: ' + PORT)
       app.set('port', PORT || 3000);
       const server = require('http').createServer(app)
       // const realtime = require('./services/realtime/realtime')
