@@ -15,13 +15,13 @@ app.use(checkJwt)
 app.use(decodeJsonWebToken)
 app.use(auth0Error)
 
+app.use('/public', express.static(path.join(__dirname, "/public/")));
 app.use('/api', indexRoutes)
 
 app.use(history({
   index: '/'
 }))
 
-app.use('/public', express.static(path.join(__dirname, "/public/")));
 
 app.get('/', function (req, res) {
   res.sendFile('index.html', { root: path.join(__dirname, '/public/') });
