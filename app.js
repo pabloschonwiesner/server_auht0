@@ -16,7 +16,8 @@ app.use('/public', express.static(path.join(__dirname, "/public/")));
 app.use(checkJwt)
 app.use(decodeJsonWebToken)
 app.use(auth0Error)
-app.use('/api', indexRoutes)
+app.use(error404)
+app.use(generalErrorHandler)
 
 app.use(history({
   index: '/'
@@ -27,8 +28,7 @@ app.get('/', function (req, res) {
   res.sendFile('index.html', { root: path.join(__dirname, '/public/') });
 });
 
-app.use(error404)
-app.use(generalErrorHandler)
+app.use('/api', indexRoutes)
 
 
 module.exports = app
