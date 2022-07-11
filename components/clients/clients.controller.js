@@ -6,6 +6,7 @@ module.exports = {
     try {
       // const id = req.params.id
       console.log('getClients');
+      console.log(`ord_id: ${req.org_id}`)
       return response.success(res, { ok: true });
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -13,6 +14,7 @@ module.exports = {
   async createClient(req, res) {
     try {
       console.log('createClient');
+      console.log(`ord_id: ${req.org_id}`)
       return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -20,6 +22,7 @@ module.exports = {
   async updateClient(req, res) {
     try {
       console.log('updateClient');
+      console.log(`ord_id: ${req.org_id}`)
       return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -27,7 +30,8 @@ module.exports = {
   async deleteClient(req, res) {
     try {
       console.log('deleteClient');
-      return res.status(204)
+      console.log(`ord_id: ${req.org_id}`)
+      return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
 

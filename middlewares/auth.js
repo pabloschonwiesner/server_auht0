@@ -1,20 +1,20 @@
-const jwt = require('jsonwebtoken');
-const { SECRET } = require('../config/config');
+const jwt = require('jsonwebtoken')
+const { auth, claimIncludes } = require('express-oauth2-jwt-bearer');
+const { ISSUER_BASE_URL, AUDIENCE } = require('./../config/config')
+const parseJwt = require('./../services/utils/parseJwt')
 
-const verificaToken = (req, res, next) => {
-  let token = req.headers['token']
-  jwt.verify(token, SECRET, (err, decoded) => {
-    // si el token no corresponde o venció envía un error
-    if(err) {
-      return res.status(401).json({
-        err: {
-          message: 'Token no valido'
-        }
-      })
-    } 
-    req.usuario = decoded.data;
-    next();
-  })
+const checkJwt = auth({
+  audience: AUDIENCE,
+  issuerBaseURL: ISSUER_BASE_URL,
+});
+
+const requiredPermissions = claimIncludes.bind(null, 'permissions')
+
+function decodeJsonWebToken(req, res, next) {
+  const authorization = req.headers.authorization;
+  const token = authorization.split(' ')[1]
+  req.org_id = parseJwt(token).org_id
+  next()
 }
 
-module.exports = { verificaToken }
+module.exports = { checkJwt, requiredPermissions, decodeJsonWebToken }

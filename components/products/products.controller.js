@@ -6,6 +6,8 @@ module.exports = {
     try {
       // const id = req.params.id
       console.log('getProducts');
+      console.log(`ord_id: ${req.org_id}`)
+
       return response.success(res, { ok: true });
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -13,6 +15,7 @@ module.exports = {
   async createProduct(req, res) {
     try {
       console.log('createProduct');
+      console.log(`ord_id: ${req.org_id}`)
       return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -20,6 +23,7 @@ module.exports = {
   async updateProduct(req, res) {
     try {
       console.log('updateProduct');
+      console.log(`ord_id: ${req.org_id}`)
       return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
@@ -27,7 +31,8 @@ module.exports = {
   async deleteProduct(req, res) {
     try {
       console.log('deleteProduct');
-      return res.status(204)
+      console.log(`ord_id: ${req.org_id}`)
+      return response.success(res, { ok: true })
     } catch (err) { logger.error(err); return response.serverError(res, err) }
   },
 
