@@ -11,11 +11,11 @@ const app = express()
 app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.use('/public', express.static(path.join(__dirname, "/public/")));
 app.use(checkJwt)
 app.use(decodeJsonWebToken)
 app.use(auth0Error)
-
-app.use('/public', express.static(path.join(__dirname, "/public/")));
 app.use('/api', indexRoutes)
 
 app.use(history({
