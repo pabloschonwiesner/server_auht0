@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken')
 const { auth, claimIncludes } = require('express-oauth2-jwt-bearer');
 const { ISSUER_BASE_URL, AUDIENCE } = require('./../config/config')
 const parseJwt = require('./../services/utils/parseJwt')

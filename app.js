@@ -1,5 +1,4 @@
 const express = require('express')
-const path = require('path')
 const cors = require('cors')
 require('./services/utils/env')
 const { error404, generalErrorHandler, auth0Error } = require('./middlewares/errors')
